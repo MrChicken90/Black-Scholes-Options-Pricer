@@ -63,7 +63,15 @@ def black_scholes_with_greeks(S, K, T, r, sigma, option_type):
     }
 
 # --- Sidebar for User Inputs ---
-st.sidebar.header("Option Parameters")
+st.sidebar.header("Black-Scholes Model")
+st.sidebar.markdown("""
+**Created by:**
+<a href="www.linkedin.com/in/kheelan-sarathee-319877261" target="_blank">
+    <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" width="20" style="vertical-align:middle; margin-right: 5px;">
+    Kheelan Sarathee
+</a>
+""", unsafe_allow_html=True)
+st.sidebar.markdown("---")
 
 S = st.sidebar.number_input("Current Asset Price ($)", min_value=1.0, value=100.0, step=0.5)
 K = st.sidebar.number_input("Strike Price ($)", min_value=1.0, value=105.0, step=0.5)
